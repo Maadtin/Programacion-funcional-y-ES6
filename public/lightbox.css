@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+h1 {
+  margin-bottom: 2em;
+}
+
+.gallery-container {
+  width: 90%;
+}
+
+.gallery-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+
+.gallery-item img, .lightbox-container img {
+  width: 100%;
+  display: block;
+}
+
+.lightbox-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.lightbox-container {
+  width: 80%;
+  color: #fff;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  background-color: crimson;
+  cursor: pointer;
+  display: block;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 45px;
+  right: -15px;
+  top: -15px;
+  border-radius: 50%;
+  border: 2px solid;
+  z-index: 20;
+}
+
+.lightbox-container img {
+  position: relative;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  text-align: center;
+}
+
+.lightbox-description,
+.lightbox-navigation__counter {
+  padding: .5em;
+  display: block;
+}
+
+.lightbox-navigation {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 1em;
+}
+
+.prev, .next {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.prev {
+  margin-right: auto;
+}
+
+.next {
+  margin-left: auto;
+}
